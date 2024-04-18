@@ -1,0 +1,15 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+             xmlns:dxc="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             xmlns:dxpdf="clr-namespace:DevExpress.Maui.Pdf;assembly=DevExpress.Maui.Pdf"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
+             x:Class="maui_generate_and_bind_reports.MainPage">
+
+    <Grid x:Name="Grid1" RowDefinitions="Auto,Auto,Auto,*" ColumnDefinitions="*" Padding="25, 0, 25, 0" RowSpacing="25">
+        <dxpdf:PdfViewer x:Name="pdfViewer" Grid.Row="1" ShowToolbar="True"/>
+        <dx:DXButton Content="Share Report" Clicked="OnShareReportButtonClicked" Grid.Row="2" HorizontalOptions="Fill" Margin="16,12" Padding="16,12"/>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+		<OutputType>Exe</OutputType>
+		<UseMaui>true</UseMaui>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<SingleProject>true</SingleProject>
+		<RootNamespace>maui_generate_and_bind_reports</RootNamespace>
+
+		<DevExpress_Data>23.2.4</DevExpress_Data>
+
+		<!-- Display name -->
+		<ApplicationTitle>maui_generate_and_bind_reports</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.maui_generate_and_bind_reports</ApplicationId>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<UseInterpreter Condition="$(TargetFramework.Contains('-ios')) AND '$(Configuration)' == 'Release'">True</UseInterpreter>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+		<CreatePackage>false</CreatePackage>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#6750A4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#6750A4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.7" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="5.3.0" />
+
+		<PackageReference Include="DevExpress.Reporting.Core" Version="$(DevExpress_Data)" />
+		<PackageReference Include="DevExpress.Document.Processor" Version="$(DevExpress_Data)" />
+		<PackageReference Include="DevExpress.Drawing.Skia" Version="$(DevExpress_Data)" />
+        <PackageReference Include="DevExpress.Pdf.SkiaRenderer" Version="$(DevExpress_Data)" />
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0" />
+		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.8" />
+
+		<PackageReference Include="DevExpress.Maui.Controls" Version="$(DevExpress_Data)" />
+		<PackageReference Include="DevExpress.Maui.Core" Version="$(DevExpress_Data)" />
+		<PackageReference Include="DevExpress.Maui.Editors" Version="$(DevExpress_Data)" />
+		<PackageReference Include="DevExpress.Maui.Pdf" Version="$(DevExpress_Data)" />
+
+		<TrimmableAssembly Include="DevExpress.Data.v23.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<DXJsonProjectReference Include="m" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DotNetMeteor.HotReload.Plugin" Version="3.*" />
+	</ItemGroup>
+</Project>

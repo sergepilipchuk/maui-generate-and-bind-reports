@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "maui-generate-and-bind-reports", "maui-generate-and-bind-reports.csproj", "{318A64E5-B58D-4E6E-84D2-AB751232E088}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{EBC4DFFF-17CE-4EF8-82B0-B98A7A79B4C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{318A64E5-B58D-4E6E-84D2-AB751232E088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{318A64E5-B58D-4E6E-84D2-AB751232E088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{318A64E5-B58D-4E6E-84D2-AB751232E088}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{318A64E5-B58D-4E6E-84D2-AB751232E088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{318A64E5-B58D-4E6E-84D2-AB751232E088}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDD3016F-23F5-405A-A25A-7654BAA5497B}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.FileWidth = 80
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.LabelPositioning = LeftMost
+		$3.NewLinesForBracesInTypes = False
+		$3.NewLinesForBracesInMethods = False
+		$3.NewLinesForBracesInProperties = False
+		$3.NewLinesForBracesInAccessors = False
+		$3.NewLinesForBracesInAnonymousMethods = False
+		$3.NewLinesForBracesInControlBlocks = False
+		$3.NewLinesForBracesInAnonymousTypes = False
+		$3.NewLinesForBracesInObjectCollectionArrayInitializers = False
+		$3.NewLinesForBracesInLambdaExpressionBody = False
+		$3.WrappingKeepStatementsOnSingleLine = False
+		$3.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal
